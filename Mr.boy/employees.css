@@ -1,0 +1,192 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.employee-details {
+  border: 2px solid #291603;
+  border-radius: 10px;
+  padding: 15px;
+  width:27%; /* Smaller width for the employee details */
+  background-color: #fff;
+  position: fixed; /* Fixed position for employee details */
+  top: 40px; /* Adjust based on padding/margin */
+  left: 22%; /* Adjust position as needed */
+  overflow-y: auto; /* Add scroll if content exceeds height */
+}
+
+.employee-details h2 {
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="date"], input[type="number"], input[type="file"] {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #291603;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+button:hover {
+  background-color: #312f2e;
+}
+
+.image-container img {
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.employee-list {
+  border: 2px solid #291603;
+  border-radius: 10px;
+  padding: 15px;
+  width: 48%; /* Larger width for the employee list */
+  background-color: #fff;
+  position: fixed; /* Make the employee list fixed */
+  top: 40px; /* Adjust based on padding/margin */
+  left: 51%; /* Adjust position as needed */
+  height: calc(100vh - 60px); /* Full height minus margin */
+  overflow-y: auto; /* Add scroll if content exceeds height */
+}
+
+.employee-list h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #241001;
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Ensure the header stays on top */
+color: #fff
+}
+
+.employee-row {
+  cursor: pointer;
+}
+
+.employee-row:hover {
+  background-color: #f9f9f9;
+}
+
+tbody {
+  display: block;
+  max-height: calc(100vh - 200px); /* Adjust based on the remaining height */
+  overflow-y: auto;
+  width: 100%;
+}
+
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Modal styling remains unchanged */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: 1px solid #bdb3b2;
+  box-sizing: border-box;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  background-color: #241001;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content input[type="email"] {
+  width: calc(100% - 20px); /* Use full width minus padding */
+}
+
+.employee-list th:nth-child(2),
+.employee-list td:nth-child(2) {
+  width: 21%; /* Allocate more width for the email column */
+  word-wrap: break-word; /* Break long email addresses to fit within cell */
+}
